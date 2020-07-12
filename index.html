@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+    <title>Logica de Programação</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class='calculator'>
+        <input type='text' placeholder="0" id="inputado">
+
+        <div class='calculator-buttons'>
+            <button class="calc-button is-clear" onclick="reset('')">C</button>
+            <button value ="/" class="calc-button simb" onclick="botao('/')">&divide;</button>
+
+            <button value ="7" class="calc-button num" onclick="botao('7')">7</button>   
+            <button value ="8" class="calc-button num" onclick="botao('8')">8</button>   
+            <button value ="9" class="calc-button num" onclick="botao('9')">9</button>
+            <button value ="*" class="calc-button simb" onclick="botao('*')">&times;</button>
+  
+            <button value ="4" class="calc-button num" onclick="botao('4')">4</button>   
+            <button value ="5" class="calc-button num" onclick="botao('5')">5</button>   
+            <button value ="6" class="calc-button num" onclick="botao('6')">6</button>
+            <button value ='-' class="calc-button simb" onclick="botao('-')">&minus;</button>
+
+            <button value ="1" class="calc-button num" onclick="botao('1')">1</button>
+            <button value ="2" class="calc-button num" onclick="botao('2')">2</button>   
+            <button value ="3" class="calc-button num" onclick="botao('3')">3</button>   
+            <button value ='+' class="calc-button simb" onclick="botao('+')">&plus;</button>
+
+            <button value ="0" class="calc-button is-zero" onclick="botao('0')">0</button>  
+            <button class="calc-button is-equals" onclick="calcular()">&equals;</button> 
+        </div>
+        
+    </div>
+    
+<script>
+
+function botao(valor){
+    var botao = document.getElementById('inputado').value;
+    document.getElementById('inputado').value = botao + valor;
+    // OU document.getElementById('inputado').value += valor;
+}
+
+function reset(){
+    document.getElementById('inputado').value = '';
+}
+
+function calcular(){
+    var resultado = 0;
+
+    resultado = document.getElementById('inputado').value;
+
+    document.getElementById('inputado').value = eval(resultado);
+
+}
+
+
+
+
+
+</script>
+
+
+
+<script>
+
+</script>
+    
+
+</body>
+
+
+
+
+</html>
